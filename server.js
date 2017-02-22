@@ -153,6 +153,10 @@ function Server (client, opts) {
       return;
     }
 
+    if (req.method === "POST") {
+      return sendJSON(res, {"error": "Not implemented"}, 501);
+    }
+
     if (req.method !== "GET" && req.method !== "HEAD") {
       return sendJSON(res, {"error": "Method not allowed"}, 405);
     }
