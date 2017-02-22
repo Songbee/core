@@ -7,6 +7,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "lodash.isequal": "^4.5.0",
+    "lodash.valuesin": "^4.3.0",
     "mime": "^1.3.4",
     "parse-torrent": "^5.8.1",
     "parse-torrent-file": "^4.0.1",
