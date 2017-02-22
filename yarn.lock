@@ -176,6 +176,10 @@ end-of-stream@^1.1.0:
   dependencies:
     once "~1.3.0"
 
+env-paths:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/env-paths/-/env-paths-1.0.0.tgz#4168133b42bb05c38a35b1ae4397c8298ab369e0"
+
 filestream@^4.0.0:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/filestream/-/filestream-4.1.3.tgz#948fcaade8221f715f5ecaddc54862faaacc9325"
@@ -223,6 +227,10 @@ glob@^7.0.5:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
+graceful-fs@^4.1.6:
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
+
 immediate-chunk-store@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/immediate-chunk-store/-/immediate-chunk-store-1.0.8.tgz#0ecdad0c546332672d7b5b511b26bb18ce56e73f"
@@ -267,6 +275,18 @@ is-typedarray@^1.0.0:
 isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
+
+jsonfile-promised:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/jsonfile-promised/-/jsonfile-promised-0.0.1.tgz#5c8bafc055c3cc93a7413eb8d62634eaa4de54b8"
+  dependencies:
+    jsonfile "^2.3.1"
+
+jsonfile@^2.3.1:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-2.4.0.tgz#3736a2b428b87bbda0cc83b53fa3d633a35c2ae8"
+  optionalDependencies:
+    graceful-fs "^4.1.6"
 
 junk@^1.0.1:
   version "1.0.3"
