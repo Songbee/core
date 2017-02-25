@@ -1,10 +1,9 @@
-const fs = require("fs");
+const fs = require("fs-extra");
 const url = require("url");
 const path = require("path");
 
 const isEqual = require("lodash.isequal");
 const envPaths = require("env-paths");
-const jsonfile = require("jsonfile-promised");
 const valuesIn = require("lodash.valuesin");
 const WebTorrent = require("./promisified-webtorrent");
 const parseTorrent = require("parse-torrent");
@@ -19,6 +18,8 @@ class TorrentClient {
                         path.join(DEFAULT_PATHS.data, "beecoredb.json");
     this.cachePath = options.cachePath || DEFAULT_PATHS.cache;
 
+    console.log(`databasePath: ${this.databasePath}`);
+
     this.webtorrent = new WebTorrent();
     this.server = new Server(this);
     this.server.listen(options.port || 50050);
@@ -27,14 +28,14 @@ class TorrentClient {
     this.torrentState = {};
 
     if (fs.existsSync(this.databasePath)) {
-      jsonfile.readFile(this.databasePath).then(db => {
+      fs.readJson(this.databasePath, (err, db) => {
         valuesIn(db.torrentState).map((o) => {
           this.add(o.parsedTorrent, options);
         });
         Object.assign(this.torrentState, db.torrentState);
       });
     } else {
-      jsonfile.writeFileSync(this.databasePath, {
+      fs.outputJSONSync(this.databasePath, {
         v: 0,
         torrentState: this.torrentState,
       });
@@ -60,9 +61,11 @@ class TorrentClient {
         options: options,
       };
 
-      jsonfile.writeFileSync(this.databasePath, {
+      fs.outputJSON(this.databasePath, {
         v: 0,
         torrentState: this.torrentState,
+      }, err => {
+        if (err) console.warn(err);
       });
 
       return torrent;

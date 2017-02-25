@@ -2,6 +2,6 @@ const MAGNET = "magnet:?xt=urn:btih:NKLVTP75LQFPMUYZS6P3PAZBRH2PHQ25&dn=sintel.m
 const TC = require(".");
 const tc = new TC();
 console.log(tc.server.address());
-tc.add(MAGNET).then(() => {
-  console.log("READY!");
-});
+// tc.add(MAGNET).then(() => {
+//   console.log("READY!");
+// });
