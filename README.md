@@ -12,17 +12,20 @@ Using torrents in your app should be simple! Even if it isn't Node.js. And if
 your app is restarted, you'd probably still want to seed the files downloaded
 in previous sessions.
 
-~~To get started, run:~~ **Work in progress**
+To get started, run:
 
 ```
-$ songbee-core -p 50050
+$ songbee-core
 { address: '::', family: 'IPv6', port: 50050 }
 ```
+
+Specifying a port will be available soon. Right now, the API is exposed
+at `http://localhost:50050/`.
 
 
 ## API
 
-To add a torrent, `POST /` a `multipart/form-data` request:
+**WIP** To add a torrent, `POST /` a `multipart/form-data` request:
 
 - Required:
   - `torrent` — torrent file
@@ -57,6 +60,6 @@ To get info about a torrent, `GET /<infoHash>`:
 
 To stream a file, `GET /<infoHash>/<fileNo>`. That's it!
 
-~~When you add a torrent, Songbee Core stores it in a database, so when it starts
-again, it'll restore the state and resume seeding (or downloading) the torrents.~~
-**Work in progress!**
+When you add a torrent, Songbee Core stores it in a database, so when it starts
+again, it'll restore the state and resume seeding (or downloading) the torrents.
+**(needs more testing)**
