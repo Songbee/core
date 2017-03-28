@@ -25,13 +25,13 @@ at `http://localhost:50050/`.
 
 ## API
 
-**WIP** To add a torrent, `POST /` a `multipart/form-data` request:
+To add a torrent, `POST` it as an `application/x-bittorrent`:
 
-- Required:
-  - `torrent` — torrent file
-  - `magnet` — a magnet link
-- Optional:
-  - `path` — where to save files, default is `path.join(cachePath, infoHash)`
+```
+$ http post localhost:50050 @sintel.torrent
+
+{"name": "sintel.mp4", "url": "/6a9759bffd5c0af65319979fb7832189f4f3c35d"}
+```
 
 
 To retrieve a list of torrents, `GET /`:
