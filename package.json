@@ -1,7 +1,13 @@
 {
   "name": "songbee-core",
   "version": "0.0.0",
-  "main": "./index.js",
+  "main": "./lib/index.js",
+  "bin": {
+    "songbee-core": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node --harmony-proxies bin/cli.js"
+  },
   "repository": "https://github.com/Songbee/core",
   "author": "The Songbee Team <hi@songbee.net>",
   "license": "GPL-3.0",
@@ -9,6 +15,7 @@
     "env-paths": "^1.0.0",
     "fs-extra": "^2.0.0",
     "lodash.isequal": "^4.5.0",
+    "lodash.throttle": "^4.1.1",
     "lodash.valuesin": "^4.3.0",
     "mime": "^1.3.4",
     "parse-torrent": "^5.8.1",
