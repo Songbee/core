@@ -12,7 +12,7 @@
 doesn't depend on Node.js and is maintained more actively. If you just need
 a nice HTTP-based torrent client, give [Cloud Torrent] (AGPLv3) a try.
 
-[anacrolix/confluence]: https://github.com/anacrolix/confluence
+[Confluence]: https://github.com/anacrolix/confluence
 [Cloud Torrent]: https://github.com/jpillora/cloud-torrent
 
 Using torrents in your app should be simple! Even if it isn't Node.js. And if
