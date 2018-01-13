@@ -1,12 +1,19 @@
 <h1 align="center" style="border-bottom: none;">
-  <img src="https://gitcdn.xyz/repo/Songbee/assets/master/songbee-core.svg" alt="logo" width="200">
+  <img src="https://cdn.rawgit.com/Songbee/assets/master/songbee-core.svg" alt="logo" width="200">
   <br>
   Songbee Core
 </h1>
 
-<h4 align="center">A headless torrent client for <a href="http://songbee.net">Songbee</a></h4>
+<h4 align="center">A headless torrent client made for <a href="https://songbee.net">Songbee</a></h4>
 
 ---
+
+**NB**: This project is stalled. You can use [Confluence] (MPL) instead: it
+doesn't depend on Node.js and is maintained more actively. If you just need
+a nice HTTP-based torrent client, give [Cloud Torrent] (AGPLv3) a try.
+
+[anacrolix/confluence]: https://github.com/anacrolix/confluence
+[Cloud Torrent]: https://github.com/jpillora/cloud-torrent
 
 Using torrents in your app should be simple! Even if it isn't Node.js. And if
 your app is restarted, you'd probably still want to seed the files downloaded
